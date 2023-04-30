@@ -1,0 +1,58 @@
+﻿@page "/about"
+
+<PageTitle>Khoi Duc - About</PageTitle>
+
+
+<div class="d-flex flex-align-center full-height">
+    <div class="ma-6 text-center">
+        <MudImage Style="background-color: rgb(0,43,78);" ObjectFit="ObjectFit.Cover" Height="400" Width="400" Src="images/1682763897290.JPEG" Elevation="25" Class="rounded" />
+        <MudText Typo="Typo.h6" GutterBottom="true" >Full-Stack Developer</MudText>
+
+        <MudText Class="bold animate__animated animate__delay-1s animate__pulse" Typo="Typo.h4" GutterBottom="true" Color="Color.Warning">
+           Nguyễn Minh Đức Khôi
+        </MudText>
+    </div>
+    <div class="small-paragraph ma-10">
+        <MudText Typo="Typo.h4" GutterBottom="true" Color="Color.Warning" Class="animate__animated animate__delay-1s animate__pulse">About the Developer</MudText>
+
+        <MudText Typo="Typo.subtitle1" GutterBottom="true">
+            Hi, my name is Nguyễn Minh Đức Khôi. I'm a .NET developer and problem solving is my favorite. I love hard problem because I can learn a lot of knowledge from it.
+            Beside working, I usually learning about playing sport and reading book in my free time. Hanging out with friend and breathing fresh air is what I usually do in the weekend after a hard working week.
+            Working in a group is hard, but I love something challenging. Having multiple conversation to have an unified opinion is a feeling when I reach a goal of my daily basic. When I got to college, I was finally able to create things
+            that can be found on my <span class="link" @click="$router.push('/projects')">projects page</span>.
+        </MudText>
+        <div class="d-flex flex-align-between">
+            <div>
+                <MudList Clickable="true">
+                    <MudListItem Icon="@Icons.Material.Filled.Timeline" IconColor="Color.Warning" Text='@($"{Age} years old")'/>
+                    <MudListItem Icon="@Icons.Material.Filled.LocationOn" IconColor="Color.Warning" Text="TPHCM, VN" />
+                    <MudListItem Icon="@Icons.Custom.Brands.GitHub" IconColor="Color.Warning" Href="https://github.com/KhoiDuc" Text="KhoiDuc" />
+                </MudList>
+            </div>
+            <div>
+                <MudList Clickable="true">
+                    <MudListItem Icon="@Icons.Material.Filled.Email" IconColor="Color.Warning" Text="khoi.duc.dev@gmail.com" />
+                    <MudListItem Icon="@Icons.Material.Filled.Phone" IconColor="Color.Warning" Text="(84) 0938751116" />
+                    <MudListItem Icon="@Icons.Custom.Brands.LinkedIn" IconColor="Color.Warning" Href="https://www.linkedin.com/in/%C4%91%E1%BB%A9c-kh%C3%B4i-354b77269/" Text="Nguyễn Minh Đức Khôi" />
+                </MudList>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@code {
+    private int Age = 0;
+
+    protected override void OnInitialized() {
+        DateTime zeroTime = new DateTime(1, 1, 1);
+
+        DateTime a = new DateTime(1999, 08, 25);
+        DateTime b = DateTime.Today;
+
+        TimeSpan span = b - a;
+        Age = (zeroTime + span).Year - 1;
+    }
+}

@@ -1,0 +1,26 @@
+﻿@page "/expertise"
+
+<PageTitle>Khoi Duc - EXPERTISE</PageTitle>
+
+
+<div class="d-flex flex-align-center full-height">
+    <MudCarousel Class="mud-width-full my-auto" Style="height:650px;" ShowArrows="false" ShowBullets="true" EnableSwipeGesture="false" TData="object">
+        <MudCarouselItem Transition="MudBlazor.Transition.Fade" Class="d-flex flex-align-center">
+            <MudCard Elevation="25" Class="rounded pa-4 mx-auto" style="max-width: 850px">
+                <MudCardContent Class="flex-align-center">
+                    <div class="d-flex flex-align-between">
+                        <MudText Typo="Typo.h5" Class="animate__animated animate__delay-1s animate__pulse" Color="Color.Warning">EXPERTISE</MudText>
+                        <MudText Typo="Typo.h6" Class="animate__animated animate__delay-1s animate__pulse">Tasks that I can do.</MudText>
+                    </div>
+                    <MudDivider class="mt-4" />
+                    <MudList Clickable="true">
+                        <MudListItem Icon="@Icons.Material.Filled.ArrowRight" IconColor="Color.Warning" Text='C#/.NET: Application development using the C# language and the .NET (Core) platform.' />
+                        <MudListItem Icon="@Icons.Material.Filled.ArrowRight" IconColor="Color.Warning" Text="ASP.NET (CORE) / BLAZOR / FULL-STACK / BACK-END: Web-application development. It can be either a back-end or an application with user interface on Blazor or MVC." />
+                        <MudListItem Icon="@Icons.Material.Filled.ArrowRight" IconColor="Color.Warning" Text="INTEGRATION WITH THIRD-PARTY SYSTEMS: Integration of applications with web services (payment systems, data providers, etc.), cloud services, local applications." />
+                        <MudListItem Icon="@Icons.Material.Filled.ArrowRight" IconColor="Color.Warning" Text="DATA PARSING: Parsing data from web pages, files and other sources." />
+                    </MudList>
+                </MudCardContent>
+            </MudCard>
+        </MudCarouselItem>
+    </MudCarousel>
+</div>
