@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>McPeakDev</title>
+    <title>Khoi Duc</title>
     <base href="/" />
-    <link href="https://fonts.googleapis.com/css?family=Coda&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Coda&display=swap" rel="stylesheet">
     <link href="./css/site.css" rel="stylesheet" />
     <link href="./_content/MudBlazor/MudBlazor.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 </head>
 
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <!--Customized Loading animation ProgressBar-->
+        <div class="progress w-50" style="position: relative; margin-top:20%; left: 27%">
+            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: var(--blazor-load-percentage, 0%)">
+                <span class="loading-text"></span>
+            </div>
+        </div>
+    </div>
 
     <div id="blazor-error-ui">
         An unhandled error has occurred.

@@ -9,7 +9,7 @@
 	} else {
 		<MudCarousel Class="mud-width-full my-auto" Style="height:650px;" ShowArrows="false" ShowBullets="true" EnableSwipeGesture="false" TData="object">
 			@foreach(var project in projects.OrderBy(x => x.pushed_at)) {
-				@if (project.name != "BlazorWasmPortfolio")
+				@if (project.name != "PortfolioBlazorWasm")
 				{
 					<MudCarouselItem Transition="MudBlazor.Transition.Fade" Class="d-flex flex-align-center">
 						<MudCard Elevation="25" Style="width: 850px;" Class="rounded pa-4 my-2">
